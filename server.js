@@ -64,7 +64,7 @@ server.get('/top_post_comments/', (request, response) => {
       const options = {
         hostname: 'www.reddit.com',
         port: 443,
-        path: `/r/Home/comments/${request.query.commentId}.json?sort=top`,
+        path: `/r/${request.query.subreddit}/comments/${request.query.commentId}.json?sort=top`,
         method: 'GET',
         headers: {
           'User-Agent': 'myreddittapp'
